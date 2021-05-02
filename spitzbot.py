@@ -12,11 +12,11 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-if message.content.startswith('#spitz:'):
-    kasi = message.content.replace('#spitz:', '')
-    with open(kasi) as kasii:
-        kasiyaru = kasii.read()
-    await message.channel.send(kasiyaru)
+    if message.content.startswith('#spitz:'):
+        kasi = message.content.replace('#spitz:', '')
+        with open(kasi) as kasii:
+            kasiyaru = kasii.read()
+        await message.channel.send(kasiyaru)
 
 
 client.run(token)
