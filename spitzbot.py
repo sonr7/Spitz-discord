@@ -16,7 +16,8 @@ async def on_message(message):
         kasi = message.content.replace('#spitz:', '')
         with open(kasi) as kasii:
             kasiyaru = kasii.read()
-        await message.channel.send(kasiyaru)
+        embed = discord.Embed(title = kasi, description = kasiyaru)
+        await message.channel.send(embed = embed)
 
 
 client.run(token)
